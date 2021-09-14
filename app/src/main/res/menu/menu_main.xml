@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bit.turit.MainActivity"
+    >
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_perfil"
+            android:title="@string/perfil"
+            android:icon="@drawable/ic_person">
+
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_datos_del_usuario"
+                        android:title="@string/datos_de_usuario"
+                        android:icon="@drawable/ic_edit" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/nav_notificaciones"
+            android:icon="@drawable/ic_notifications_outlined"
+            android:title="@string/notificaciones" />
+
+        <item
+            android:id="@+id/nav_historial"
+            android:title="@string/historial_canjes"
+            android:icon="@drawable/ic_list_alt"/>
+
+        <item
+            android:id="@+id/nav_TyC"
+            android:title="@string/terminos_condiciones"
+            android:icon="@drawable/ic_outline_sticky_note"/>
+
+        <item
+            android:id="@+id/nav_seguridad"
+            android:title="@string/seguridad"
+            android:icon="@drawable/ic_seguridad"/>
+
+        <item
+            android:id="@+id/nav_sobre_nosotros"
+            android:title="@string/sobre_nosotros"
+            android:icon="@drawable/ic_outline_person"/>
+
+        <item
+            android:onClick="cerrarsesion"
+            android:id="@+id/nav_logout"
+            android:title="@string/cerrar_sesion"
+            android:icon="@drawable/ic_baseline_logout_24"/>
+
+    </group>
+</menu>

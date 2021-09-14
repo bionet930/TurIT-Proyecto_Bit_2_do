@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleTicketActivity"
+    android:background="@color/dark_blue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutPremioASeleccionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvLocal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/toolbar_roundcorner"
+        android:theme="@style/Theme.TurIt.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/premioTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/darker_blue"
+                android:fontFamily="@font/archivo_black"
+                android:text="@string/toolbar_premio_a_seleccionar"
+                android:textColor="@color/dark_golden"
+                android:textSize="25sp"
+                android:letterSpacing="0.05"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/detalle_content_scrolling"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayoutPremioASeleccionar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

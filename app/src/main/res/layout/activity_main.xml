@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:fitsSystemWindows="true">
+        <!--tools:openDrawer="start">-->
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_view"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/menu_main"
+            android:layout_gravity="start"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayoutHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.TurIt.AppBarOverlay"
+                android:elevation="10dp"
+                android:background="@color/darker_blue">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:popupTheme="@style/Theme.TurIt.AppBarOverlay">
+
+                    <!--LinearLayout horizontal con 4 ConstraintLayout: El del logo, el del contador y puntos, el del icono de tickets y el del switch y el texto-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <!--Primer ConstrainLayout con el logo-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3">
+
+                            <ImageView
+                                android:id="@+id/logo"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:contentDescription="@string/description_logo"
+                                android:src="@drawable/logosolotexto"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--Segundo ConstraintLayout con contador y texto del contador-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:id="@+id/counterTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/puntosTV"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/puntosTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/puntos"
+                                android:textSize="13sp"
+                                android:textColor="@color/white"
+                                android:paddingBottom="4dp"
+                                app:layout_constraintEnd_toEndOf="@+id/counterTV"
+                                app:layout_constraintStart_toStartOf="@+id/counterTV"
+                                app:layout_constraintTop_toBottomOf="@+id/counterTV" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--Tercer ConstraintLayout con el icono de tickets acumulados-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tickets_acumuladosIV"
+                            app:layout_constraintTop_toBottomOf="@+id/tickets_acumuladosIV">
+
+                            <ImageView
+                                android:id="@+id/tickets_acumuladosIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_outline_confirmation_number_24"
+                                app:layout_constraintBottom_toTopOf="@+id/tickets_acumuladosTV"
+                                app:layout_constraintEnd_toEndOf="@+id/tickets_acumuladosTV"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="@id/tickets_acumuladosTV"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed"
+                                android:contentDescription="@string/icono_ticket" />
+
+                            <TextView
+                                android:id="@+id/tickets_acumuladosTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/misTickets"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tickets_acumuladosIV" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--Cuarto ConstraintLayout con el switch y su texto-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <Switch
+                                android:id="@+id/swActivarNotificaciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:onClick="onClickSW"
+                                app:layout_constraintBottom_toTopOf="@+id/tvNotificaciones"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvNotificaciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/toolbar_notificaciones"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/swActivarNotificaciones"
+                                app:layout_constraintStart_toStartOf="@+id/swActivarNotificaciones"
+                                app:layout_constraintTop_toBottomOf="@+id/swActivarNotificaciones" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <include layout="@layout/content_main" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_NavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:elevation="8dp"
+                app:menu="@menu/menu_bottom"
+                app:labelVisibilityMode="selected"
+                style="@style/AppTheme"
+                android:background="@drawable/bottomnavbar_roundcorner"/>
+
+        </RelativeLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "438149471245",
+    "project_id": "turit-fc7f4",
+    "storage_bucket": "turit-fc7f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438149471245:android:434e73d5d07c520fef8944",
+        "android_client_info": {
+          "package_name": "com.bit.turit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438149471245-h1fmd5hvpd57fjbek5pmjgi3uk6a1bde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrrQPgKB2skPaVwKh8gzyu0CFXjJCxsag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438149471245-h1fmd5hvpd57fjbek5pmjgi3uk6a1bde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

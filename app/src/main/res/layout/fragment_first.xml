@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="60dp">
+
+            <ImageView
+                android:contentDescription="@string/description_puerto"
+                android:id="@+id/imageButtonPuerto"
+                android:layout_width="410dp"
+                android:layout_height="200dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/puertodesalto"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_4_corners"/>
+
+            <TextView
+                android:id="@+id/textviewPuerto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:gravity="clip_vertical|center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                android:text="@string/texto_agregar"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:contentDescription="@string/description_shopping"
+                android:id="@+id/imageButtonLocales"
+                android:layout_width="410dp"
+                android:layout_height="200dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/localesdescuentos"
+                android:background="@drawable/rounded_4_corners"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/textViewLocales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_canjear_premios"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif"
+                android:gravity="clip_vertical|center_horizontal" />
+
+            <ImageView
+                android:contentDescription="@string/description_parque"
+                android:id="@+id/imageButtonLugares"
+                android:layout_width="410dp"
+                android:layout_height="200dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/lugaresrecomendados"
+                android:background="@drawable/rounded_4_corners"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_lugres_recomendados"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif"
+                android:gravity="clip_vertical|center_horizontal"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

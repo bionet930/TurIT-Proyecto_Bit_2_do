@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home_item_title"/>
+
+    <item
+        android:id="@+id/ticket"
+        android:icon="@drawable/ic_qr_code_scanner"
+        android:title="@string/ticket_item_title"/>
+
+    <item
+        android:id="@+id/agregar"
+        android:title="@string/agregar_item_title"
+        android:icon="@drawable/ic_add"/>
+
+    <item
+        android:id="@+id/lugares"
+        android:title="@string/lugares_item_title"
+        android:icon="@drawable/ic_map"/>
+
+    <item
+        android:id="@+id/tiendas"
+        android:title="@string/tiendas_item_title"
+        android:icon="@drawable/ic_store"/>
+
+</menu>

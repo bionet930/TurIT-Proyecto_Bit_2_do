@@ -1,0 +1,309 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:scrollbarSize="4dp"
+    tools:context=".TiendasActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutTiendas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_roundcorner"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTiendas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/TiendasTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:backgroundTint="@color/darker_blue"
+                android:fontFamily="@font/archivo_black"
+                android:letterSpacing="0.05"
+                android:text="@string/toolbar_tiendas"
+                android:textColor="@color/dark_golden"
+                android:textSize="21sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutTiendas"
+        android:paddingTop="50dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="70dp">
+
+            <TextView
+                android:id="@+id/categoryTxt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Hoteles"
+                android:textColor="#F6F3F3"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/horizontal1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal1"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryTxt1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageButton
+                        android:id="@+id/hotel1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="irHotelEspañol"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/hotelespanol" />
+
+                    <ImageButton
+                        android:id="@+id/hotel2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/hotel1"
+                        app:layout_constraintTop_toTopOf="@id/hotel1"
+                        app:srcCompat="@drawable/hotelcasino" />
+
+                    <ImageButton
+                        android:id="@+id/hotel3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/hotel2"
+                        app:layout_constraintTop_toTopOf="@id/hotel2"
+                        app:srcCompat="@drawable/eldorado" />
+
+                    <ImageButton
+                        android:id="@+id/hotel4"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/hotel3"
+                        app:layout_constraintTop_toTopOf="@id/hotel3"
+                        app:srcCompat="@drawable/hotelhoracioquiroga" />
+
+                    <ImageButton
+                        android:id="@+id/hotel5"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/hotel4"
+                        app:layout_constraintTop_toTopOf="@id/hotel4"
+                        app:srcCompat="@drawable/hotelsolarelacuario" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/categoryTxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Restaurantes"
+                android:textColor="#F6F3F3"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/categoryTxt1"
+                app:layout_constraintTop_toBottomOf="@id/horizontal1" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal2"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryTxt2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/restaurant1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="irRestaurante"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/dolcezza" />
+
+                    <ImageButton
+                        android:id="@+id/restaurant2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/restaurant1"
+                        app:layout_constraintTop_toTopOf="@id/restaurant1"
+                        app:srcCompat="@drawable/lagoleta" />
+
+                    <ImageButton
+                        android:id="@+id/restaurant3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/restaurant2"
+                        app:layout_constraintTop_toTopOf="@id/restaurant2"
+                        app:srcCompat="@drawable/elrancho" />
+
+                    <ImageButton
+                        android:id="@+id/restaurant4"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/restaurant3"
+                        app:layout_constraintTop_toTopOf="@id/restaurant3"
+                        app:srcCompat="@drawable/lacaldera" />
+
+                    <ImageButton
+                        android:id="@+id/restaurant5"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/restaurant4"
+                        app:layout_constraintTop_toTopOf="@id/restaurant4"
+                        app:srcCompat="@drawable/drink" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/categoryTxt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Tiendas"
+                android:textColor="#F6F3F3"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal2" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal3"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryTxt3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/Tiendas1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+
+                        android:onClick="irShopping"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/pimenton" />
+
+                    <ImageButton
+                        android:id="@+id/Tiendas2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/Tiendas1"
+                        app:layout_constraintTop_toTopOf="@id/Tiendas1"
+                        app:srcCompat="@drawable/artesanos" />
+
+                    <ImageButton
+                        android:id="@+id/Tiendas3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/Tiendas2"
+                        app:layout_constraintTop_toTopOf="@id/Tiendas2"
+                        app:srcCompat="@drawable/merrell" />
+
+                    <ImageButton
+                        android:id="@+id/Tiendas4"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/Tiendas3"
+                        app:layout_constraintTop_toTopOf="@id/Tiendas3"
+                        app:srcCompat="@drawable/guapa" />
+
+                    <ImageButton
+                        android:id="@+id/Tiendas5"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toEndOf="@id/Tiendas4"
+                        app:layout_constraintTop_toTopOf="@id/Tiendas4"
+                        app:srcCompat="@drawable/bas" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_NavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:elevation="8dp"
+            app:menu="@menu/menu_bottom"
+            app:labelVisibilityMode="selected"
+            style="@style/AppTheme"
+            android:background="@drawable/bottomnavbar_roundcorner"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
